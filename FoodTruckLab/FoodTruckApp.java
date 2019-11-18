@@ -36,7 +36,7 @@ class Order implements Runnable {
             try {
                 System.out.printf("Order %d is starting to plate at %d\n", this.order, System.currentTimeMillis());
                 Thread.sleep(1000);
-                System.out.printf("Order %d is finishing plating at %d\n", this.order, System.currentTimeMillis());
+                System.out.printf("Order %d is finishing plating at %d\nOrder up!\n", this.order, System.currentTimeMillis());
             } catch(InterruptedException e) {}
         }
     }
