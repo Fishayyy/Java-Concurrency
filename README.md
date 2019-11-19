@@ -1,2 +1,2 @@
 # Java-Concurrency
-Examples from class as well as labs experiimenting with Java Concurrency
+Examples from class as well as labs experimenting with Java Concurrency
