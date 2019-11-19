@@ -4,14 +4,14 @@ public class ProdConApp {
         Thread producer = new Thread(new Runnable() {
             public void run() {
                 try { 
-                    processor.read();
+                    processor.produce();
                 } catch(InterruptedException e) {}
             }
         });
         Thread consumer = new Thread(new Runnable() {
             public void run() {
                 try { 
-                    processor.write();
+                    processor.consume();
                 } catch(InterruptedException e) {}
             }
         });

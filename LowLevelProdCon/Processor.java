@@ -1,10 +1,11 @@
 import java.util.LinkedList;
 
 public class Processor {
-    private LinkedList<Integer> list = new LinkedList<Intger>();
+    private LinkedList<Integer> list = new LinkedList<Integer>();
     private final int LIMIT = 10;
+    private Object lock = new Object();
 
-    public void produe() throws InterruptedException {
+    public void produce() throws InterruptedException {
         int value = 0;
         while (true) {
             synchronized(lock) {
