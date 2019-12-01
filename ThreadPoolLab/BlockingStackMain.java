@@ -1,33 +1,33 @@
 import java.util.Random;
 
-class ThreadA implements Runnable {
+class WorkerA implements Runnable {
     public void run() {
         try {
             Thread.sleep(100);
-            System.out.println("Thread Type A done");
+            System.out.println("Worker Type A done");
         } catch(InterruptedException e) {} 
     }
 }
 
-class ThreadB implements Runnable {
+class WorkerB implements Runnable {
     public void run() {
         try {
             Thread.sleep(200);
-            System.out.println("Thread Type B done");
+            System.out.println("Worker Type B done");
         } catch(InterruptedException e) {}
     }
 }
 
-class ThreadC implements Runnable {
+class WorkerC implements Runnable {
     public void run() {
         try {
             Thread.sleep(150);
-            System.out.println("Thread Type C done");
+            System.out.println("Worker Type C done");
         } catch(InterruptedException e) {} 
     }
 }
 
-public class ThreadPoolMain {
+public class BlockingStackMain {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
         ThreadPoolPart1 pool = new ThreadPoolPart1(5);
@@ -38,13 +38,13 @@ public class ThreadPoolMain {
             try {
                 switch(value) {
                     case 0:
-                        pool.submit(new ThreadA());
+                        pool.submit(new WorkerA());
                         break;
                     case 1:
-                        pool.submit(new ThreadB());
+                        pool.submit(new WorkerB());
                         break;
                     case 2:
-                        pool.submit(new ThreadC());
+                        pool.submit(new WorkerC());
                         break; 
                 }
             } catch(InterruptedException e) {} 

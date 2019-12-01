@@ -1,16 +1,14 @@
 import java.util.List;
 import java.util.LinkedList;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ArrayBlockingQueue;
 
-public class ThreadPool {
+public class ThreadPoolPart2 {
     private List<Thread> workers;
-    private BlockingQueue<Runnable> tasks;
+    private BlockingStack<Runnable> tasks;
     private boolean isShutdown;
 
-    public ThreadPool (int numberThreads) {
+    public ThreadPoolPart2 (int numberThreads) {
         this.workers = new LinkedList<>();
-        this.tasks = new ArrayBlockingQueue<>(10000);
+        this.tasks = new BlockingStack<Runnable>(10);
         this.isShutdown = false;
 
         for (int i = 0; i < numberThreads; ++i) {
@@ -18,7 +16,7 @@ public class ThreadPool {
                 public void run() {
                     try {
                         while(!tasks.isEmpty() || !isShutdown)
-                            tasks.take().run();
+                            tasks.pop().run();
                     } catch(InterruptedException e) {}
                 }
             });
@@ -30,7 +28,7 @@ public class ThreadPool {
 
     public void submit(Runnable task) throws InterruptedException { 
         if(!this.isShutdown)
-            this.tasks.put(task);
+            this.tasks.push(task);
     }
 
     public void shutdown() { this.isShutdown = true; }
