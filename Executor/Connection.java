@@ -26,10 +26,13 @@ public class Connection {
         }
         try {
             Thread.sleep(1000);
-        } catch(InterruptedException e) {}
+        } catch(InterruptedException e) {
+
+        } finally {
         synchronized(this) {
             connections--;
         }
         sem.release();
+        }
     }
 }
