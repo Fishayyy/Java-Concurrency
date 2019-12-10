@@ -12,11 +12,16 @@ class Order implements Runnable {
     private static Semaphore prep = new Semaphore(2,true);
     private static Semaphore stove = new Semaphore(2,true);
     private static Semaphore plate = new Semaphore(2,true);
+    public Lock lock;
+    public Condition cond;
 
-    public Order(int orderNum) { this.orderNum = orderNum; }
+    public Order(int orderNum) { 
+        this.orderNum = orderNum; 
+        this.lock = new ReentrantLock();
+        this.cond = lock.newCondition();
+    }
 
-    public void run() {
-        //Prep
+    public void prep() {
         try {
             prep.acquire();
             System.out.printf("Order %d is starting to prep at %d\n", orderNum, System.currentTimeMillis());
@@ -26,7 +31,9 @@ class Order implements Runnable {
         finally {
             prep.release();
         }
-        //Cook
+    }
+
+    public void cook() {
         try {
             stove.acquire();
             System.out.printf("Order %d is starting to cook at %d\n", orderNum, System.currentTimeMillis());
@@ -36,8 +43,10 @@ class Order implements Runnable {
         finally {
             stove.release();
         }
-        //Plate
-        try {
+    }
+    //Plate
+    public void plate() {
+        try {    
             plate.acquire();
             System.out.printf("Order %d is starting to plate at %d\n", orderNum, System.currentTimeMillis());
             Thread.sleep(1000);
@@ -47,27 +56,43 @@ class Order implements Runnable {
             plate.release();
         }
     }
+
+    public void run() {
+        Thread puck = new Thread(new Puck(orderNum, lock, cond));
+    
+        puck.start();
+        prep();
+        cook();
+        plate();
+        lock.lock();
+        cond.signal();
+        lock.unlock();
+    }
 }
 
-// class Puck {
+class Puck implements Runnable{
 
-//     int orderNum;
+    int orderNum;
+    Lock lock;
+    Condition cond;
 
-//     public Puck(int orderNum) { this.orderNum = orderNum; }
+    public Puck(int orderNum, Lock lock, Condition cond) { 
+        this.orderNum = orderNum; 
+        this.lock = lock;
+        this.cond = cond;
+    }
 
-//     public void {
-//         try{
-//             lock.lock();
-//             System.out.printf("Puck for order number %d has been given to a customer\n", orderNum);
-//             condition.await();
-//             System.out.printf("Sending the signal to puck for Order %d", orderNum);
-//             System.out.printf("Puck for order number %d has started ringing", orderNum);
-//         } catch(InterruptedException e) { }
-//         finally{
-//             lock.unlock();
-//         }
-//     }
-// }
+    public void run(){
+        try{
+            lock.lock();
+            System.out.printf("Puck for order number %d has been given to a customer\n", orderNum);
+            cond.await();
+            System.out.printf("Sending the signal to puck for Order %d\n", orderNum);
+            System.out.printf("Puck for order number %d has started ringing\n", orderNum);
+            lock.unlock();
+        } catch(InterruptedException e) { }
+    }
+}
 
 public class RadishDinerLab {
     public static void main(String[] args) {
