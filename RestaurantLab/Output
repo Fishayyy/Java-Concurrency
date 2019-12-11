@@ -1,0 +1,231 @@
+SAMPLE RUN #1:
+=========================================================================
+fishayyy@Spectrex360:~/Desktop/Java-Concurrency/RestaurantLab$ java RadishDinerLab 
+Order 0 recieved at 1576040170619
+Puck for order number 0 has been given to a customer
+Order 0 is starting to prep at 1576040170636
+Order 1 recieved at 1576040170759
+Puck for order number 1 has been given to a customer
+Order 1 is starting to prep at 1576040170761
+Order 2 recieved at 1576040171141
+Puck for order number 2 has been given to a customer
+Order 3 recieved at 1576040171673
+Puck for order number 3 has been given to a customer
+Order 0 is finishing preping at 1576040172137
+Order 0 is starting to cook at 1576040172138
+Order 2 is starting to prep at 1576040172138
+Order 1 is finishing preping at 1576040172262
+Order 1 is starting to cook at 1576040172263
+Order 3 is starting to prep at 1576040172263
+Order 4 recieved at 1576040172345
+Puck for order number 4 has been given to a customer
+Order 5 recieved at 1576040172399
+Puck for order number 5 has been given to a customer
+Order 6 recieved at 1576040172875
+Puck for order number 6 has been given to a customer
+Order 7 recieved at 1576040173357
+Puck for order number 7 has been given to a customer
+Order 2 is finishing preping at 1576040173639
+Order 3 is finishing preping at 1576040173764
+Order 8 recieved at 1576040174112
+Puck for order number 8 has been given to a customer
+Order 0 is finishing cooking at 1576040174138
+Order 0 is starting to plate at 1576040174139
+Order 2 is starting to cook at 1576040174139
+Order 1 is finishing cooking at 1576040174264
+Order 1 is starting to plate at 1576040174264
+Order 3 is starting to cook at 1576040174264
+Order 9 recieved at 1576040174494
+Puck for order number 9 has been given to a customer
+All orders recieved
+Order 0 is finishing plating at 1576040175140
+Order up!
+Sending the signal to puck for Order 0
+Puck for order number 0 has started ringing
+Order 4 is starting to prep at 1576040175142
+Order 1 is finishing plating at 1576040175265
+Order up!
+Sending the signal to puck for Order 1
+Puck for order number 1 has started ringing
+Order 5 is starting to prep at 1576040175266
+Order 2 is finishing cooking at 1576040176141
+Order 2 is starting to plate at 1576040176142
+Order 3 is finishing cooking at 1576040176266
+Order 3 is starting to plate at 1576040176266
+Order 4 is finishing preping at 1576040176643
+Order 4 is starting to cook at 1576040176644
+Order 5 is finishing preping at 1576040176768
+Order 5 is starting to cook at 1576040176769
+Order 2 is finishing plating at 1576040177142
+Order up!
+Order 6 is starting to prep at 1576040177143
+Sending the signal to puck for Order 2
+Puck for order number 2 has started ringing
+Order 3 is finishing plating at 1576040177267
+Order up!
+Order 7 is starting to prep at 1576040177267
+Sending the signal to puck for Order 3
+Puck for order number 3 has started ringing
+Order 6 is finishing preping at 1576040178644
+Order 4 is finishing cooking at 1576040178644
+Order 4 is starting to plate at 1576040178645
+Order 6 is starting to cook at 1576040178645
+Order 7 is finishing preping at 1576040178768
+Order 5 is finishing cooking at 1576040178769
+Order 5 is starting to plate at 1576040178770
+Order 7 is starting to cook at 1576040178770
+Order 4 is finishing plating at 1576040179646
+Order up!
+Sending the signal to puck for Order 4
+Puck for order number 4 has started ringing
+Order 8 is starting to prep at 1576040179647
+Order 5 is finishing plating at 1576040179770
+Order up!
+Order 9 is starting to prep at 1576040179771
+Sending the signal to puck for Order 5
+Puck for order number 5 has started ringing
+Order 6 is finishing cooking at 1576040180646
+Order 6 is starting to plate at 1576040180647
+Order 7 is finishing cooking at 1576040180771
+Order 7 is starting to plate at 1576040180771
+Order 8 is finishing preping at 1576040181148
+Order 8 is starting to cook at 1576040181149
+Order 9 is finishing preping at 1576040181272
+Order 9 is starting to cook at 1576040181272
+Order 6 is finishing plating at 1576040181647
+Order up!
+Sending the signal to puck for Order 6
+Puck for order number 6 has started ringing
+Order 7 is finishing plating at 1576040181772
+Order up!
+Sending the signal to puck for Order 7
+Puck for order number 7 has started ringing
+Order 8 is finishing cooking at 1576040183149
+Order 8 is starting to plate at 1576040183150
+Order 9 is finishing cooking at 1576040183273
+Order 9 is starting to plate at 1576040183273
+Order 8 is finishing plating at 1576040184150
+Order up!
+Sending the signal to puck for Order 8
+Puck for order number 8 has started ringing
+Order 9 is finishing plating at 1576040184274
+Order up!
+Sending the signal to puck for Order 9
+Puck for order number 9 has started ringing
+All orders completed.
+
+Sample Run #2
+=========================================================================
+fishayyy@Spectrex360:~/Desktop/Java-Concurrency/RestaurantLab$ java RadishDinerLab 
+Order 0 recieved at 1576040289002
+Puck for order number 0 has been given to a customer
+Order 0 is starting to prep at 1576040289020
+Order 1 recieved at 1576040289426
+Puck for order number 1 has been given to a customer
+Order 1 is starting to prep at 1576040289428
+Order 2 recieved at 1576040289993
+Puck for order number 2 has been given to a customer
+Order 0 is finishing preping at 1576040290521
+Order 0 is starting to cook at 1576040290522
+Order 2 is starting to prep at 1576040290522
+Order 3 recieved at 1576040290770
+Puck for order number 3 has been given to a customer
+Order 1 is finishing preping at 1576040290929
+Order 1 is starting to cook at 1576040290930
+Order 3 is starting to prep at 1576040290930
+Order 4 recieved at 1576040291186
+Puck for order number 4 has been given to a customer
+Order 5 recieved at 1576040291408
+Puck for order number 5 has been given to a customer
+Order 2 is finishing preping at 1576040292023
+Order 6 recieved at 1576040292192
+Puck for order number 6 has been given to a customer
+Order 3 is finishing preping at 1576040292431
+Order 0 is finishing cooking at 1576040292522
+Order 0 is starting to plate at 1576040292523
+Order 2 is starting to cook at 1576040292523
+Order 7 recieved at 1576040292796
+Puck for order number 7 has been given to a customer
+Order 8 recieved at 1576040292895
+Puck for order number 8 has been given to a customer
+Order 1 is finishing cooking at 1576040292930
+Order 1 is starting to plate at 1576040292931
+Order 3 is starting to cook at 1576040292931
+Order 0 is finishing plating at 1576040293524
+Order up!
+Sending the signal to puck for Order 0
+Puck for order number 0 has started ringing
+Order 4 is starting to prep at 1576040293525
+Order 9 recieved at 1576040293663
+All orders recieved
+Puck for order number 9 has been given to a customer
+Order 1 is finishing plating at 1576040293932
+Order up!
+Order 5 is starting to prep at 1576040293932
+Sending the signal to puck for Order 1
+Puck for order number 1 has started ringing
+Order 2 is finishing cooking at 1576040294525
+Order 2 is starting to plate at 1576040294526
+Order 3 is finishing cooking at 1576040294932
+Order 3 is starting to plate at 1576040294932
+Order 4 is finishing preping at 1576040295027
+Order 4 is starting to cook at 1576040295027
+Order 5 is finishing preping at 1576040295433
+Order 5 is starting to cook at 1576040295433
+Order 2 is finishing plating at 1576040295526
+Order up!
+Order 6 is starting to prep at 1576040295527
+Sending the signal to puck for Order 2
+Puck for order number 2 has started ringing
+Order 3 is finishing plating at 1576040295933
+Order up!
+Sending the signal to puck for Order 3
+Puck for order number 3 has started ringing
+Order 7 is starting to prep at 1576040295934
+Order 6 is finishing preping at 1576040297028
+Order 4 is finishing cooking at 1576040297028
+Order 4 is starting to plate at 1576040297029
+Order 6 is starting to cook at 1576040297029
+Order 5 is finishing cooking at 1576040297434
+Order 5 is starting to plate at 1576040297435
+Order 7 is finishing preping at 1576040297435
+Order 7 is starting to cook at 1576040297436
+Order 4 is finishing plating at 1576040298029
+Order up!
+Sending the signal to puck for Order 4
+Puck for order number 4 has started ringing
+Order 8 is starting to prep at 1576040298030
+Order 5 is finishing plating at 1576040298435
+Order up!
+Sending the signal to puck for Order 5
+Puck for order number 5 has started ringing
+Order 9 is starting to prep at 1576040298436
+Order 6 is finishing cooking at 1576040299030
+Order 6 is starting to plate at 1576040299030
+Order 7 is finishing cooking at 1576040299436
+Order 7 is starting to plate at 1576040299437
+Order 8 is finishing preping at 1576040299531
+Order 8 is starting to cook at 1576040299532
+Order 9 is finishing preping at 1576040299938
+Order 9 is starting to cook at 1576040299938
+Order 6 is finishing plating at 1576040300031
+Order up!
+Sending the signal to puck for Order 6
+Puck for order number 6 has started ringing
+Order 7 is finishing plating at 1576040300438
+Order up!
+Sending the signal to puck for Order 7
+Puck for order number 7 has started ringing
+Order 8 is finishing cooking at 1576040301532
+Order 8 is starting to plate at 1576040301533
+Order 9 is finishing cooking at 1576040301939
+Order 9 is starting to plate at 1576040301939
+Order 8 is finishing plating at 1576040302533
+Order up!
+Sending the signal to puck for Order 8
+Puck for order number 8 has started ringing
+Order 9 is finishing plating at 1576040302940
+Order up!
+Sending the signal to puck for Order 9
+Puck for order number 9 has started ringing
+All orders completed.
